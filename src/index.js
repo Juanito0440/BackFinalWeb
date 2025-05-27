@@ -13,6 +13,11 @@ app.use(cors({
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
+app.options('*', cors({
+  origin: 'https://final-web-fawn.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json({ limit: "10mb" }));
 app.use(express.json());

@@ -44,7 +44,7 @@ const pool = mysql.createPool({
   password: process.env.DB_PASSWORD, // Cambiado de DB_PASSWORD a MYSQL_PASSWORD
   database: process.env.DB_NAME, // Cambiado de DB_NAME a MYSQL_DATABASE
   port: process.env.DB_PORT, // ¡MUY IMPORTANTE! Cambiado de DB_PORT a MYSQL_PORT (que es 3306)
-  ssl: true, // Puedes considerar poner esto a true si la conexión es segura, pero false debería funcionar internamente en Railway
+  ssl: false, // Puedes considerar poner esto a true si la conexión es segura, pero false debería funcionar internamente en Railway
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0
